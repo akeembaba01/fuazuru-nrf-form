@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUAZuru - NRF 2025 Grant Strategy</title>
+    <style>
+        /* University Branding */
+        :root {
+            --fuazuru-green: #1e6b23;
+            --fuazuru-light: #f8fff8;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .university-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(to right, var(--fuazuru-green), #0d4d11);
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .university-header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+        .university-header h2 {
+            margin: 10px 0;
+            font-size: 1.4rem;
+            font-weight: 400;
+        }
+        .section {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            border: 1px solid #e1e4e8;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        h2 {
+            color: var(--fuazuru-green);
+            border-bottom: 2px solid var(--fuazuru-green);
+            padding-bottom: 8px;
+            margin-top: 0;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: 600;
+            color: #333;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            background-color: var(--fuazuru-green);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 25px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+            display: block;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #155618;
+        }
+        .required::after {
+            content: " *";
+            color: #e74c3c;
+        }
+        .note {
+            font-size: 0.9em;
+            color: #666;
+            font-style: italic;
+            margin-top: 5px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #777;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="university-header">
+        <h1>Federal University of Agriculture Zuru</h1>
+        <h2>NRF 2025 Grant Application Strategy</h2>
+        <p>Complete this form by <strong>20 August 2025</strong> for university support coordination</p>
+    </div>
+
+    <form action="https://formspree.io/f/mkgzkwev" method="POST">
+        <!-- Principal Investigator Section -->
+        <div class="section">
+            <h2>Principal Investigator (PI) Information</h2>
+            
+            <label for="pi_name" class="required">Full Name</label>
+            <input type="text" id="pi_name" name="pi_name" required>
+            
+            <label for="staff_id" class="required">Staff ID</label>
+            <input type="text" id="staff_id" name="staff_id" required>
+            
+            <label for="pi_department" class="required">Department</label>
+            <input type="text" id="pi_department" name="pi_department" required>
+            
+            <label for="pi_rank" class="required">Current Rank</label>
+            <select id="pi_rank" name="pi_rank" required>
+                <option value="">Select Rank</option>
+                <option value="Senior Lecturer">Senior Lecturer</option>
+                <option value="Principal Lecturer">Principal Lecturer</option>
+                <option value="Associate Professor">Associate Professor</option>
+                <option value="Professor">Professor</option>
+            </select>
+            <p class="note">NRF Requirement: PI must be at least Senior Lecturer/Principal Lecturer</p>
+            
+            <label for="pi_email" class="required">University Email</label>
+            <input type="email" id="pi_email" name="pi_email" required placeholder="name@fuazuru.edu.ng">
+            
+            <label for="pi_phone" class="required">Phone Number</label>
+            <input type="tel" id="pi_phone" name="pi_phone" required>
+        </div>
+
+        <!-- Research Team Section -->
+        <div class="section">
+            <h2>Research Team Composition</h2>
+            
+            <label for="team_size" class="required">Number of Team Members</label>
+            <select id="team_size" name="team_size" required>
+                <option value="">Select Size</option>
+                <option value="2">2 (PI + 1)</option>
+                <option value="3">3 (PI + 2)</option>
+                <option value="4">4 (PI + 3)</option>
+                <option value="5+">5+ members</option>
+            </select>
+            
+            <label for="team_details" class="required">Team Member Details</label>
+            <textarea id="team_details" name="team_details" rows="5" required placeholder="Format: 
+Name - Institution - Department - Role
+Example: 
+Dr. Jane Doe - FUAZuru - Agricultural Economics - Co-Investigator
+Prof. John Smith - UNIBEN - Engineering - Consultant"></textarea>
+            <p class="note">Multidisciplinary teams are encouraged. Include at least 1 member for proposal defense.</p>
+        </div>
+
+        <!-- Project Information Section -->
+        <div class="section">
+            <h2>Research Project Details</h2>
+            
+            <label for="project_title" class="required">Proposed Research Title</label>
+            <input type="text" id="project_title" name="project_title" required>
+            
+            <label for="thematic_area" class="required">Primary Thematic Area</label>
+            <select id="thematic_area" name="thematic_area" required>
+                <optgroup label="Science, Engineering, Technology & Innovation">
+                    <option value="Agriculture and Food Security">Agriculture and Food Security</option>
+                    <option value="Sustainable use of Natural Resources">Sustainable use of Natural Resources</option>
+                    <option value="Water and Sanitation">Water and Sanitation</option>
+                    <option value="Geosciences">Geosciences</option>
+                    <option value="Health and Social Welfare">Health and Social Welfare</option>
+                </optgroup>
+                <optgroup label="Cross-Cutting">
+                    <option value="Environment and Regional Development">Environment and Regional Development</option>
+                    <option value="Clean and Affordable Energy">Clean and Affordable Energy</option>
+                    <option value="Resource Governance">Resource Governance</option>
+                </optgroup>
+                <optgroup label="Humanities & Social Sciences">
+                    <option value="Education and Human Capital">Education and Human Capital</option>
+                    <option value="Economic Development">Economic Development</option>
+                </optgroup>
+            </select>
+            
+            <label for="project_summary" class="required">Concept Note Summary (Max 250 words)</label>
+            <textarea id="project_summary" name="project_summary" rows="5" required placeholder="Briefly describe:
+- Research problem
+- Objectives
+- Methodology
+- Expected outcomes"></textarea>
+        </div>
+
+        <!-- University Support -->
+        <div class="section">
+            <h2>Requested University Support</h2>
+            
+            <label><input type="checkbox" name="support[]" value="proposal_review"> Proposal Content Review</label><br>
+            <label><input type="checkbox" name="support[]" value="budget_planning"> Budget Planning Assistance</label><br>
+            <label><input type="checkbox" name="support[]" value="data_analysis"> Data Analysis Support</label><br>
+            <label><input type="checkbox" name="support[]" value="lab_equipment"> Laboratory Equipment Access</label><br>
+            <label><input type="checkbox" name="support[]" value="field_work"> Field Work Logistics</label><br>
+            
+            <label for="other_support">Other Support Requirements</label>
+            <textarea id="other_support" name="other_support" rows="2"></textarea>
+        </div>
+
+        <!-- Timeline -->
+        <div class="section">
+            <h2>Application Timeline</h2>
+            
+            <label for="draft_date" class="required">Date Draft Concept Note Will Be Ready</label>
+            <input type="date" id="draft_date" name="draft_date" required min="2025-08-01" max="2025-08-20">
+            <p class="note">University internal deadline: 20 August 2025</p>
+        </div>
+
+        <!-- Declaration -->
+        <div class="section">
+            <h2>Declaration</h2>
+            
+            <label><input type="checkbox" required name="eligibility"> I confirm that I meet NRF eligibility requirements</label><br><br>
+            <label><input type="checkbox" required name="deadline"> I commit to meeting the 20 August 2025 internal deadline</label><br><br>
+            <label><input type="checkbox" required name="institutional"> I authorize FUAZuru as the coordinating institution</label>
+        </div>
+
+        <button type="submit">Submit for University Support</button>
+    </form>
+
+    <div class="footer">
+        <p>Research Development Office • Federal University of Agriculture Zuru</p>
+        <p>Contact: grants-support@fuazuru.edu.ng | +234 XXX XXXX XXXX</p>
+    </div>
+
+    <script>
+        // Set default date to tomorrow
+        const tomorrow = new Date();
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        document.getElementById('draft_date').valueAsDate = tomorrow;
+        
+        // Validate PI rank
+        document.querySelector('form').addEventListener('submit', function(e) {
+            const rank = document.getElementById('pi_rank').value;
+            if (!['Senior Lecturer', 'Principal Lecturer', 'Associate Professor', 'Professor'].includes(rank)) {
+                alert('Error: PI must be at least Senior Lecturer/Principal Lecturer rank');
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
