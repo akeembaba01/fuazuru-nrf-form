@@ -17,29 +17,31 @@
             background-color: #f9f9f9;
         }
         
-        /* UNIFIED HEADER STYLES */
+        /* CLEAR VISIBLE HEADER STYLES */
         .header {
             text-align: center;
-            padding: 25px 20px;
+            padding: 30px 20px;
             background: linear-gradient(to right, var(--fuazuru-green), #0d4d11);
             color: white;
             border-radius: 8px;
             margin-bottom: 30px;
         }
-        .header h1 {
+        .header .university-name {
             font-size: 1.8rem;
-            margin: 0;
+            margin: 0 0 10px 0;
             font-weight: 600;
         }
         .header .form-title {
             font-size: 1.8rem; /* Same size as university name */
             font-weight: 600; /* Same weight as university name */
-            margin: 10px 0; /* Adjusted spacing */
+            margin: 15px 0; /* Proper spacing */
             padding: 0;
+            line-height: 1.3;
         }
-        .header p {
-            font-size: 1.1rem;
-            margin-top: 5px;
+        .header .deadline {
+            font-size: 1.2rem;
+            margin-top: 15px;
+            font-weight: 500;
         }
         
         .section {
@@ -107,9 +109,9 @@
                 padding: 10px;
             }
             .header {
-                padding: 20px 15px;
+                padding: 25px 15px;
             }
-            .header h1,
+            .header .university-name,
             .header .form-title {
                 font-size: 1.5rem;
             }
@@ -120,11 +122,11 @@
     </style>
 </head>
 <body>
-    <!-- UNIFIED HEADER SECTION -->
+    <!-- CLEAR VISIBLE HEADER SECTION -->
     <div class="header">
-        <h1>Federal University of Agriculture Zuru</h1>
+        <div class="university-name">Federal University of Agriculture Zuru</div>
         <div class="form-title">NRF 2025 Grant Application Support Form</div>
-        <p>Deadline: <strong>20 August 2025</strong></p>
+        <div class="deadline">Deadline: <strong>20 August 2025</strong></div>
     </div>
 
     <form action="https://formspree.io/f/mkgzkwev" method="POST">
