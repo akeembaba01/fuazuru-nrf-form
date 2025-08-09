@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUAZuru - NRF 2025 Grant Support</title>
+    <style>
+        :root {
+            --fuazuru-green: #1e6b23;
+            --fuazuru-light: #f0f9f1;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(to right, var(--fuazuru-green), #0d4d11);
+            color: white;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+        .header h2 {
+            margin: 10px 0;
+            font-size: 1.3rem;
+            font-weight: 400;
+        }
+        .section {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border: 1px solid #e0e0e0;
+        }
+        h2 {
+            color: var(--fuazuru-green);
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        label {
+            display: block;
+            margin: 15px 0 5px;
+            font-weight: 600;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        button {
+            background: var(--fuazuru-green);
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 4px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #155618;
+        }
+        .required::after {
+            content: " *";
+            color: #e74c3c;
+        }
+        .note {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 5px;
+            font-style: italic;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #777;
+            font-size: 0.9rem;
+            padding: 15px;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .section {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Federal University of Agriculture Zuru</h1>
+        <h2>NRF 2025 Grant Application Support Form</h2>
+        <p>Deadline: 20 August 2025</p>
+    </div>
+
+    <form action="https://formspree.io/f/mkgzkwev" method="POST">
+        <!-- PI Information -->
+        <div class="section">
+            <h2>Principal Investigator</h2>
+            
+            <label for="pi_name" class="required">Full Name</label>
+            <input type="text" id="pi_name" name="pi_name" required>
+            
+            <label for="staff_id" class="required">Staff ID</label>
+            <input type="text" id="staff_id" name="staff_id" required>
+            
+            <label for="department" class="required">Department</label>
+            <input type="text" id="department" name="department" required>
+            
+            <label for="rank" class="required">Current Rank</label>
+            <select id="rank" name="rank" required>
+                <option value="">Select Rank</option>
+                <option value="Senior Lecturer">Senior Lecturer</option>
+                <option value="Principal Lecturer">Principal Lecturer</option>
+                <option value="Associate Professor">Associate Professor</option>
+                <option value="Professor">Professor</option>
+            </select>
+            <p class="note">Must be at least Senior Lecturer/Principal Lecturer</p>
+            
+            <label for="email" class="required">University Email</label>
+            <input type="email" id="email" name="email" required placeholder="you@fuazuru.edu.ng">
+        </div>
+
+        <!-- Project Details -->
+        <div class="section">
+            <h2>Research Project</h2>
+            
+            <label for="title" class="required">Research Title</label>
+            <input type="text" id="title" name="title" required>
+            
+            <label for="thematic" class="required">Thematic Area</label>
+            <select id="thematic" name="thematic" required>
+                <option value="">Select Area</option>
+                <option value="Agriculture and Food Security">Agriculture and Food Security</option>
+                <option value="Water and Sanitation">Water and Sanitation</option>
+                <option value="Sustainable Resources">Sustainable Resources</option>
+                <option value="Clean Energy">Clean Energy</option>
+                <option value="Other">Other (specify below)</option>
+            </select>
+            
+            <label for="other_thematic">Specify Other Thematic Area</label>
+            <input type="text" id="other_thematic" name="other_thematic">
+            
+            <label for="summary" class="required">Project Summary (250 words max)</label>
+            <textarea id="summary" name="summary" rows="5" required></textarea>
+        </div>
+
+        <!-- Team Information -->
+        <div class="section">
+            <h2>Research Team</h2>
+            
+            <label for="team_count" class="required">Number of Team Members</label>
+            <select id="team_count" name="team_count" required>
+                <option value="1">1 (Only PI)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5+">5 or more</option>
+            </select>
+            
+            <label for="team_details">Team Member Details</label>
+            <textarea id="team_details" name="team_details" rows="4" placeholder="Name, Institution, Department, Role"></textarea>
+            <p class="note">Separate team members with commas</p>
+        </div>
+
+        <!-- Support Needed -->
+        <div class="section">
+            <h2>Support Requested</h2>
+            
+            <label><input type="checkbox" name="support[]" value="review"> Proposal Review</label><br>
+            <label><input type="checkbox" name="support[]" value="budget"> Budget Assistance</label><br>
+            <label><input type="checkbox" name="support[]" value="data"> Data Analysis</label><br>
+            <label><input type="checkbox" name="support[]" value="lab"> Lab Equipment</label><br>
+            <label><input type="checkbox" name="support[]" value="field"> Field Work Support</label><br>
+            
+            <label for="other_support">Other Support Needed</label>
+            <input type="text" id="other_support" name="other_support">
+        </div>
+
+        <!-- Declaration -->
+        <div class="section">
+            <h2>Declaration</h2>
+            
+            <label><input type="checkbox" required name="eligibility"> I meet NRF eligibility requirements</label><br><br>
+            <label><input type="checkbox" required name="deadline"> I will submit by 20 August 2025</label><br><br>
+            <label><input type="checkbox" required name="institution"> I confirm FUAZuru as coordinating institution</label>
+        </div>
+
+        <button type="submit">Submit Application Details</button>
+    </form>
+
+    <div class="footer">
+        <p>Research Development Office • Federal University of Agriculture Zuru</p>
+        <p>Contact: grants@fuazuru.edu.ng</p>
+    </div>
+
+    <script>
+        // Set minimum date to today
+        document.getElementById('draft_date').min = new Date().toISOString().split("T")[0];
+        
+        // Validate PI rank
+        document.querySelector('form').addEventListener('submit', function(e) {
+            const rank = document.getElementById('rank').value;
+            if (!rank) {
+                alert("Please select your academic rank");
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
